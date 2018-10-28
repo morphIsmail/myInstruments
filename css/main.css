@@ -1,0 +1,113 @@
+/*общие стили*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic');
+.nav {
+   background-color: #fff;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   margin-bottom: 15px;
+   box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.5);
+}
+.arrow {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 0 !important;
+   width: 50px;
+   height: 50px;
+   background-color: rgb(0, 140, 255);
+   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.77);
+   border-radius: 50%;
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+}
+span {
+   font-weight: bold;
+   margin: 10px 0px;
+   font-size: 16px;
+}
+.arrow:hover {
+   text-decoration: none;
+   color: #fff;
+}
+.nav-item {
+   margin: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+body {
+   font-family: 'Roboto Condensed', sans-serif;
+   text-align: center;
+   background-color: #eeeeee;
+}
+label {
+   display: block;
+}
+input[type="range"] {
+   width: 100%;
+}
+input[type="color"] {
+   border: none;
+   background-color: transparent;
+   width: 55px;
+   height: 55px;
+   padding: 0px;
+   margin-bottom: 15px;
+}
+input[type="color"]:hover {
+   cursor: pointer;
+}
+textarea {
+   width: 100%;
+   resize: none;
+   margin-bottom: 15px;
+   max-width: 300px;
+   font-size: 13px;
+}
+.row > div {
+   margin-bottom: 15px;
+}
+.card {
+   height: 100%;
+}
+.card-header {
+   font-weight: bold;
+   color: #fff;
+}
+#color {
+   width: 50px;
+   height: 50px;
+   margin: 0px auto 20px;
+   border: 1px solid black;
+}
+/*стили box-shadow*/
+.result-box {
+   width: 150px;
+   height: 150px;
+   background-color: rgb(255, 198, 41);
+   margin: 25px auto;
+}
+input[type="checkbox"] {
+   margin: 0 auto;
+}
+.title {
+   
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 6px;
+   font-size: 40px;
+   color: black;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+/*стили border-radius*/
+textarea {
+   width: 100%;
+   resize: none;
+   margin-bottom: 15px;
+   max-width: 500px;
+   font-size: 16px;
+}
