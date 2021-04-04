@@ -25,9 +25,12 @@ input[type="color"] {
   height: 80px;
   border: none;
 }
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
   width: 20px;
   height: 20px;
+}
+td {
+  width: 150px;
 }
 label {
   display: block;
@@ -42,6 +45,9 @@ textarea {
   resize: none;
   height: 80px;
 }
+.triangle-generator textarea#result {
+  height: 130px;
+}
 .example {
   font-size: 40px;
 }
@@ -50,6 +56,13 @@ textarea {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+.container > div {
+  padding: 30px;
+  border-bottom: 20px solid white;
+}
+.container > div:last-child {
+  border-bottom: none;
 }
 /* Заголовок */
 .main-title {
@@ -66,19 +79,6 @@ textarea {
   width: 100px;
   height: 100px;
   background-color: #e99919;
-}
-.border-radius-generator {
-  padding: 30px;
-  border-bottom: 20px solid white;
-}
-/* Генератор тени текста */
-.text-shadow-generator {
-  padding: 30px;
-  border-bottom: 20px solid white;
-}
-/* Генератор тени блока */
-.box-shadow-generator {
-  padding: 30px;
 }
 .box-shadow-generator .result_box {
   margin-bottom: 30px;

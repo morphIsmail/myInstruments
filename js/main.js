@@ -136,3 +136,68 @@ for (let item of document.querySelectorAll('.box-shadow-generator input')) {
     });
   })
 }
+
+// Triangle generator
+function triangleGenerator(position, color, width) {
+  let general = `width: 0;
+    height: 0;
+    border-style: solid;`
+  let result
+  switch(position) {
+    case 'top_left':
+      result = `${general}
+    border-width: ${width}px ${width}px 0 0;
+    border-color: ${color} transparent transparent transparent;`
+      break
+    case 'top':
+      result = `${general}
+    border-width: 0 ${width/2}px ${width}px ${width/2}px;
+    border-color: transparent transparent ${color} transparent;`
+      break
+    case 'top_right':
+      result = `${general}
+    border-width: 0 ${width}px ${width}px 0;
+    border-color: transparent ${color} transparent transparent;`
+      break
+    case 'left':
+      result = `${general}
+    border-width: ${width/2}px ${width}px ${width/2}px 0;
+    border-color: transparent ${color} transparent transparent;`
+      break
+    case 'right':
+      result = `${general}
+    border-width: ${width/2}px 0 ${width/2}px ${width}px;
+    border-color: transparent transparent transparent ${color};`
+      break
+    case 'bottom_left':
+      result = `${general}
+    border-width: ${width}px 0 0 ${width}px;
+    border-color: transparent transparent transparent ${color};`
+      break
+    case 'bottom':
+      result = `${general}
+    border-width: ${width}px ${width/2}px 0 ${width/2}px;
+    border-color: ${color} transparent transparent transparent;`
+      break
+    case 'bottom_right':
+      result = `${general}
+    border-width: 0 0 ${width}px ${width}px;
+    border-color: transparent transparent ${color} transparent;`
+      break
+  }
+  let textarea = `.triangle {
+    ${result}
+  }`
+  document.querySelector('.triangle-generator #result').value = textarea
+  document.querySelector('.triangle').style = result
+}
+
+for(let item of document.querySelectorAll('.triangle-generator input')) {
+  item.addEventListener('input', function(e) {
+    let position = document.querySelector('input[name="triangle"]:checked').value
+    let color = document.querySelector('.triangle-generator input[type="color"]').value
+    let width = document.querySelector('.triangle-generator input[type="range"]').value
+    triangleGenerator(position, color, width)
+  })
+}
+triangleGenerator('top_left', '#ff7700', '50')
