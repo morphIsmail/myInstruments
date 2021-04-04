@@ -1,0 +1,85 @@
+/* Общие */
+* {
+  box-sizing: border-box;
+  font-family: 'Calibri', sans-serif;
+}
+body {
+  padding: 20px 0;
+}
+body, h2 {
+  margin: 0;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+input[type="color"] {
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  resize: none;
+  height: 80px;
+}
+.example {
+  font-size: 40px;
+}
+.container {
+  background-color: #eee;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* Заголовок */
+.main-title {
+  padding: 10px;
+  border-bottom: 20px solid white;
+}
+.main-title h1 {
+  text-transform: uppercase;
+  font-size: 45px;
+  text-align: center;
+}
+/* Генератор скругления углов */
+.result_box {
+  width: 100px;
+  height: 100px;
+  background-color: #e99919;
+}
+.border-radius-generator {
+  padding: 30px;
+  border-bottom: 20px solid white;
+}
+/* Генератор тени текста */
+.text-shadow-generator {
+  padding: 30px;
+  border-bottom: 20px solid white;
+}
+/* Генератор тени блока */
+.box-shadow-generator {
+  padding: 30px;
+}
+.box-shadow-generator .result_box {
+  margin-bottom: 30px;
+}

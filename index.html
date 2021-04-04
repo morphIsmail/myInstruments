@@ -2,67 +2,91 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>box-shadow</title>
+	<title>border-radius</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div class="row justify-content-center">
-			<nav class="nav">
-				<li class="nav-item">
-					<a href="text-shadow-generator.html" class="nav-link arrow">&larr;</a>
-					<span>Text-shadow</span>
-				</li>
-				<li class="nav-item">
-					<a href="border-radius-generator.html" class="nav-link arrow">&rarr;</a>
-					<span>Border-radius</span>
-				</li>
-			</nav>
+		<!-- Title -->
+		<div class="main-title">
+			<h1>CSS Generators</h1>
+		</div>
+		<!-- Border-radius -->
+		<div class="border-radius-generator">
+			<h2>border-radius generator</h2>
+			<table>
+				<tr>
+					<td>
+						<label for="top_left">top-left</label>
+						<input id="top_left" type="range" min="0" max="75" step="1" value="75">
+					</td>
+					<td></td>
+					<td>
+						<label for="top_right">top-right</label>
+						<input id="top_right" type="range" min="0" max="75" step="1" value="75">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<div class="result_box"></div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="bottom_left">bottom-left</label>
+						<input id="bottom_left" type="range" min="0" max="75" step="1" value="0">
+					</td>
+					<td></td>
+					<td>
+						<label for="bottom_right">bottom-right</label>
+						<input id="bottom_right" type="range" min="0" max="75" step="1" value="75">
+					</td>
+				</tr>
+			</table>
+			<label for="result_border_css">Результат</label>
+			<textarea id="result_border_css" readonly></textarea>
+		</div>
+		<!-- Text shadow -->
+		<div class="text-shadow-generator">
+			<h2>text-shadow generator</h2>
+			<div class="example">Test Text</div>
+			<label for="offset_x">Смещение по оси x</label>
+			<input id="offset_x" type="range" min="-15" max="15" step="1" value="4">
+			<label for="offset_y">Смещение по оси y</label>
+			<input id="offset_y" type="range" min="-15" max="15" step="1" value="-1">
+			<label for="blur">Размытие</label>
+			<input id="blur" type="range" min="0" max="15" step="1" value="0">
+			<label for="opacity">Цвет</label>
+			<input type="color" value="#ff0000">
+			<label for="opacity">Прозрачность</label>
+			<input id="opacity" type="range" min="0" max="1" step="0.01" value="1">
+			<label for="result">Результат</label>
+			<textarea id="result" readonly></textarea>
+		</div>
+		<!-- Box shadow -->
+		<div class="box-shadow-generator">
+			<h2>box-shadow generator</h2>
+			<div class="result_box"></div>
+			<label for="inset">Тень внутри элемента?</label>
+			<input type="checkbox" id="inset">
+			<label for="offset_x">Смещение по оси x</label>
+			<input id="offset_x" type="range" min="-25" max="25" step="1" value="0">
+			<label for="offset_y">Смещение по оси y</label>
+			<input id="offset_y" type="range" min="-25" max="25" step="1" value="0">
+			<label for="blur">Размытие</label>
+			<input id="blur" type="range" min="0" max="25" step="1" value="8">
+			<label for="size">Растяжение</label>
+			<input id="size" type="range" min="-20" max="20" step="1" value="6">
+			<input type="color" value="#000000">
+			<label for="opacity">Прозрачность</label>
+			<input id="opacity" type="range" min="0" max="1" step="0.01" value="0.5">
+			<label for="resultRgba">Результат</label>
+			<textarea id="resultRgba" readonly></textarea>
 		</div>
 	</div>
-	<h1 class="title">box-shadow generator</h1>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-xl-6 col-md-6">
-				<div class="card">
-					<div class="card-header bg-primary">Настройки:</div>
-					<div class="card-body">
-						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" id="inset">
-							<label class="custom-control-label" for="inset">Тень внутри элемента?</label>
-						</div>
-						<hr>
-						<label for="offset_x">Смещение по оси x</label>
-						<input class="custom-range" id="offset_x" type="range" min="-25" max="25" step="1" value="0">
-						<label for="offset_y">Смещение по оси y</label>
-						<input class="custom-range" id="offset_y" type="range" min="-25" max="25" step="1" value="0">
-						<label for="blur">Размытие</label>
-						<input class="custom-range" id="blur" type="range" min="0" max="25" step="1" value="8">
-						<label for="size">Растяжение</label>
-						<input class="custom-range" id="size" type="range" min="-20" max="20" step="1" value="6">
-						<hr>
-						<input type="color" value="#000000">
-						<label for="opacity">Прозрачность</label>
-						<input class="custom-range" id="opacity" type="range" min="0" max="1" step="0.01" value="0.5">
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-6 col-md-6">
-				<div class="card">
-					<div class="card-header bg-primary">Результат:</div>
-					<div class="card-body">
-						<div class="result-box"></div>
-						<label for="resultRgba">Код CSS</label>
-						<textarea id="resultRgba" rows="3" readonly></textarea>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/box-shadow-generator.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
