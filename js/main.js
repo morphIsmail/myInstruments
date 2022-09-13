@@ -37,7 +37,7 @@ function tsxtShadow({
   /*Функция для создания тени*/
   let cssStyles = offset_x + 'px ' + offset_y + 'px ' + blur + 'px ' + rgba
   document.querySelector('.example').style.textShadow = cssStyles
-  document.querySelector('.text-shadow-generator #result').value = 'text-shadow: ' + offset_x + 'px ' + offset_y + 'px ' + blur + 'px ' + color + '; /* Цвет в HEX*/\ntext-shadow: ' + cssStyles + '; /* Цвет в RGBA*/'
+  document.querySelector('.text-shadow-generator #result_text_shadow').value = 'text-shadow: ' + offset_x + 'px ' + offset_y + 'px ' + blur + 'px ' + color + '; /* Цвет в HEX*/\ntext-shadow: ' + cssStyles + '; /* Цвет в RGBA*/'
 }
 
 tsxtShadow({
@@ -188,9 +188,10 @@ function triangleGenerator(position, color, width) {
   let textarea = `.triangle {
     ${result}
   }`
-  document.querySelector('.triangle-generator #result').value = textarea
+  document.querySelector('.triangle-generator #result_triangle').value = textarea
   document.querySelector('.triangle').style = result
 }
+triangleGenerator('top_left', '#ff7700', '50')
 
 for(let item of document.querySelectorAll('.triangle-generator input')) {
   item.addEventListener('input', function(e) {
@@ -200,4 +201,29 @@ for(let item of document.querySelectorAll('.triangle-generator input')) {
     triangleGenerator(position, color, width)
   })
 }
-triangleGenerator('top_left', '#ff7700', '50')
+
+// Gradient Generator
+function gradientGenerator(offset_color_1, offset_color_2, direction, color_1, color_2) {
+  /*Функция для создания градиента*/
+
+  let result = `background: ${color_1};
+background: linear-gradient(${direction}deg, ${color_1} ${offset_color_1}%, ${color_2} ${offset_color_2}%);`;
+
+  document.querySelector('#result_gradient').value = result
+  document.querySelector('.example_gradient').style = result
+}
+gradientGenerator(25, 75, 90, '#000000', '#ff7700')
+
+for (let item of document.querySelectorAll('.gradient-generator input')) {
+  item.addEventListener('input', function (e) {
+    /*Событие при изменении значений*/
+    /*Новые значения переменных*/
+    let offset_color_1 = document.querySelector('.gradient-generator #offset_color_1').value; //Смещение 1-го цвета
+    let offset_color_2 = document.querySelector('.gradient-generator #offset_color_2').value; //Смещение 2-го цвета
+    let direction = document.querySelector('.gradient-generator #direction').value; //Направление
+    let color_1 = document.querySelector(".gradient-generator #color_1").value; //Цвет 1
+    let color_2 = document.querySelector(".gradient-generator #color_2").value; //Цвет 2
+
+    gradientGenerator(offset_color_1, offset_color_2, direction, color_1, color_2)
+  })
+}

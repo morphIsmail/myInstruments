@@ -45,8 +45,17 @@ textarea {
   resize: none;
   height: 80px;
 }
-.triangle-generator textarea#result {
-  height: 130px;
+hr {
+  height: 3px;
+  background-color: #000;
+  border: none;
+}
+.flex {
+  display: flex;
+  text-align: center;
+}
+.triangle-generator textarea#result_triangle {
+  height: 140px;
 }
 .example {
   font-size: 40px;
@@ -82,4 +91,27 @@ textarea {
 }
 .box-shadow-generator .result_box {
   margin-bottom: 30px;
+}
+/* Генератор тени текста */
+#result_text_shadow {
+  width: 100%; 
+  max-width: 420px;
+  height: 60px;
+}
+/* Генератор тени блока */
+#resultRgba {
+  height: 50px;
+}
+/* Генерато градиента */
+.example_gradient {
+  width: 100%; 
+  max-width: 400px;
+  height: 100px;
+  background: #000000;
+  background: linear-gradient(90deg, #000000 25%, #ff7700 75%);
+}
+#result_gradient {
+  width: 100%; 
+  max-width: 400px;
+  height: 70px;
 }
